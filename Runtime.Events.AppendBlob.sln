@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Events.AppendBlob", "Source\Runtime.Events.AppendBlob.csproj", "{4A487F7F-1FFC-4DE7-82EF-256657FD0251}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Events.Azure.Storage", "Source\Runtime.Events.Azure.Storage.csproj", "{4A487F7F-1FFC-4DE7-82EF-256657FD0251}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Events.AppenBlob.Specs", "Specifications\Runtime.Events.AppenBlob.Specs.csproj", "{51707DED-8441-43F2-A93C-35E2A55536B6}"
 EndProject

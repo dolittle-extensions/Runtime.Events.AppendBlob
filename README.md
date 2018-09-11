@@ -1,4 +1,4 @@
-# Runtime.Events.Store.AppendBlob
+# Runtime.Events.Store.Azure.Storage
 
 ## Cloning
 
@@ -35,13 +35,13 @@ $ Build\build.sh
 
 | Platform | Production   | From CI  |
 | ------- | ------- | ------ |
-| Runtime.Events.AppendBlob | [![NuGet](https://img.shields.io/nuget/v/dolittle.svg)](https://www.nuget.org/packages?q=dolittle) | [![MyGet](https://img.shields.io/myget/dolittle/vpre/dolittle.svg)](https://www.myget.org/gallery/dolittle) |
+| Runtime.Events.Azure.Storage | [![NuGet](https://img.shields.io/nuget/v/dolittle.svg)](https://www.nuget.org/packages?q=dolittle) | [![MyGet](https://img.shields.io/myget/dolittle/vpre/dolittle.svg)](https://www.myget.org/gallery/dolittle) |
 
 ## Build Status
 
 | Project | AppVeyor | 
 | -------- | ------ |
-| Runtime.Events.AppendBlob | TODO: [![Build status](https://ci.appveyor.com/api/projects/status/kjtjm9bol8xl9c62?svg=true)](https://ci.appveyor.com/project/Dolittle/runtime-events-mongodb) |
+| Runtime.Events.Azure.Storage | TODO: [![Build status](https://ci.appveyor.com/api/projects/status/kjtjm9bol8xl9c62?svg=true)](https://ci.appveyor.com/project/Dolittle/runtime-events-mongodb) |
 
 ## Visual Studio
 

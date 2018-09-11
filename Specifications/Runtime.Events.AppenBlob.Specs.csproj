@@ -6,12 +6,12 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <AssemblyName>Dolittle.Runtime.Events.AppendBlob.Specs</AssemblyName>
-    <RootNamespace>Dolittle.Runtime.Events.AppendBlob.Specs</RootNamespace>
+    <AssemblyName>Dolittle.Runtime.Events.Azure.Storage.Specs</AssemblyName>
+    <RootNamespace>Dolittle.Runtime.Events.Azure.Storage.Specs</RootNamespace>
   </PropertyGroup>
   
   <ItemGroup>
-    <ProjectReference Include="../Source/Runtime.Events.AppendBlob.csproj" />
+    <ProjectReference Include="../Source/Runtime.Events.Azure.Storage.csproj" />
   </ItemGroup>
 
  <ItemGroup>
