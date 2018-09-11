@@ -16,5 +16,6 @@
     <PackageReference  Include="Dolittle.Artifacts" Version="2.0.0-*" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.1" />
   </ItemGroup>
 </Project>
