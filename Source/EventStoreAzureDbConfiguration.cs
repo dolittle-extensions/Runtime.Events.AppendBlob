@@ -70,6 +70,10 @@ namespace Dolittle.Runtime.Events.Azure
         /// 
         /// </summary>
         public Uri OffsetsUri { get; private set; }
+                /// <summary>
+        /// 
+        /// </summary>
+        public Uri GeodesicsOffsetsUri { get; private set; }
         /// <summary>
         /// 
         /// </summary>
@@ -189,13 +193,11 @@ namespace Dolittle.Runtime.Events.Azure
         {
             if (!(await HasStoredProcedure(collection, procedureName)))
             {
-                Console.WriteLine($"Adding stored procedure: {procedureName} : {resourceName ?? "[NULL]" }");
                 var result = await Client.CreateStoredProcedureAsync(collection, new StoredProcedure
                 {
                     Id = procedureName,
                     Body = Resources.GetString(resourceName)
                 });
-                Console.WriteLine("Writing stored procedure: " + result.ActivityId);
             }
         }
         
