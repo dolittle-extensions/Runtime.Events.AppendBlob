@@ -86,18 +86,16 @@ namespace Dolittle.Runtime.Events.Azure
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="endpointUrl"></param>
-        /// <param name="databaseId"></param>
-        /// <param name="authKey"></param>
+        /// <param name="config"></param>
         /// <param name="logger"></param>
         /// <param name="executionContextManager"></param>
-        public EventStoreAzureDbConfiguration(string endpointUrl, string databaseId, string authKey, ILogger logger, IExecutionContextManager executionContextManager)
+        public EventStoreAzureDbConfiguration(EventStoreConfiguration config, ILogger logger, IExecutionContextManager executionContextManager)
         {
             Logger = logger;
             _executionContextManager = executionContextManager;
-            EndpointUrl = endpointUrl;
-            DatabaseId = databaseId;
-            AuthorizationKey = authKey;
+            EndpointUrl = config.EndPointUrl;
+            DatabaseId = config.DatabaseId;
+            AuthorizationKey = config.AuthKey;
             _collections = new List<DocumentCollection>();
             Client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey);
             BasePartitionKey =

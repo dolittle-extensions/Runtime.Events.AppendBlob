@@ -51,7 +51,13 @@ namespace Dolittle.Runtime.Events.Azure.Specs
 
         public static EventStoreAzureDbConfiguration GetEventStoreConfig()
         {
-            return new EventStoreAzureDbConfiguration(System.Environment.GetEnvironmentVariable(URL),System.Environment.GetEnvironmentVariable(DATABASE),System.Environment.GetEnvironmentVariable(AUTHKEY),GetLogger(), GetExecutionContext());
+            var config = new EventStoreConfiguration
+            {
+                EndPointUrl = System.Environment.GetEnvironmentVariable(URL),
+                DatabaseId = System.Environment.GetEnvironmentVariable(DATABASE),
+                AuthKey = System.Environment.GetEnvironmentVariable(AUTHKEY)
+            };
+            return new EventStoreAzureDbConfiguration(config,GetLogger(), GetExecutionContext());
         }
     }
 }
