@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Dolittle.Runtime.Events.Azure</AssemblyName>
+    <RootNamespace>Dolittle.Runtime.Events.Azure</RootNamespace>
+  </PropertyGroup>
+  <Import Project="../Build/MSBuild/default.props" />
+  <ItemGroup>
+    <PackageReference Include="Dolittle.Runtime.Events" Version="2.0.0-*" />
+    <PackageReference Include="Dolittle.Concepts" Version="2.0.0-*" />
+    <PackageReference Include="Dolittle.PropertyBags" Version="2.0.0-*" />
+    <PackageReference Include="Dolittle.Artifacts" Version="2.0.0-*" />
+    <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.1.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Store\EventStoreConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Store\commit.js" />
+    <EmbeddedResource Include="Store\commit.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+   <ItemGroup>
+    <PackageReference Include="MongoDB.Bson" Version="2.7.0"/>
+    <PackageReference Include="MongoDB.Driver" Version="2.7.0"/>
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.7.0"/>
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.1"/>
+  </ItemGroup> 
+</Project>
