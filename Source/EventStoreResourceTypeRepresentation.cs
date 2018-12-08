@@ -1,7 +1,7 @@
 namespace Dolittle.Runtime.Events.Azure
 {
     using Dolittle.Runtime.Events;
-    using Dolittle.Resources;
+    using Dolittle.ResourceTypes;
     using System;
     using System.Collections.Generic;
 
