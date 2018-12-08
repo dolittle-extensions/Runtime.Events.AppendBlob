@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using Dolittle.Execution;
 using Dolittle.Lifecycle;
 using Dolittle.Logging;
+using Dolittle.ResourceTypes.Configuration;
 using Dolittle.Runtime.Events.Azure.Store;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
@@ -86,13 +87,14 @@ namespace Dolittle.Runtime.Events.Azure
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="config"></param>
+        /// <param name="configFor"></param>
         /// <param name="logger"></param>
         /// <param name="executionContextManager"></param>
-        public EventStoreAzureDbConfiguration(EventStoreConfiguration config, ILogger logger, IExecutionContextManager executionContextManager)
+        public EventStoreAzureDbConfiguration(IConfigurationFor<EventStoreConfiguration> configFor, ILogger logger, IExecutionContextManager executionContextManager)
         {
             Logger = logger;
             _executionContextManager = executionContextManager;
+            var config = configFor.Instance;
             EndpointUrl = config.EndPointUrl;
             DatabaseId = config.DatabaseId;
             AuthorizationKey = config.AuthKey;
