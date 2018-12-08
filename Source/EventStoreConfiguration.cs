@@ -5,7 +5,6 @@ namespace Dolittle.Runtime.Events.Azure
     /// <summary>
     /// Defines the config values for the Azure CosmosDB instance
     /// </summary>
-    [SingletonPerTenant]
     public class EventStoreConfiguration
     {
         /// <summary>
