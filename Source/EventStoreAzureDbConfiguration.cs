@@ -153,7 +153,7 @@ namespace Dolittle.Runtime.Events.Azure
             commits.PartitionKey.Paths.Add($"/{CosmosConstants.PARTITON_KEY}");
 
             commits.IndexingPolicy.IncludedPaths.Add(new IncludedPath { Path = "/*"});
-            commits.IndexingPolicy.IncludedPaths.Add(new IncludedPath { Path = $"/{CosmosConstants.ID}/?", Indexes = new System.Collections.ObjectModel.Collection<Index> { new RangeIndex(DataType.Number, -1) }});
+            commits.IndexingPolicy.IncludedPaths.Add(new IncludedPath { Path = $"/{Constants.ID}/?", Indexes = new System.Collections.ObjectModel.Collection<Index> { new RangeIndex(DataType.Number, -1) }});
             commits.IndexingPolicy.IncludedPaths.Add(new IncludedPath { Path = "/commit/?", Indexes = new System.Collections.ObjectModel.Collection<Index> { new RangeIndex(DataType.Number, -1) }});
             commits.IndexingPolicy.ExcludedPaths.Add(new ExcludedPath { Path = "/events/*" });
             
