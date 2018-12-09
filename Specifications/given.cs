@@ -5,6 +5,7 @@ using System.Linq;
 using Dolittle.DependencyInversion;
 using Dolittle.Execution;
 using Dolittle.Logging;
+using Dolittle.ResourceTypes.Configuration;
 using Dolittle.Runtime.Events.Azure;
 using Dolittle.Security;
 using Dolittle.Serialization.Json;
@@ -23,12 +24,11 @@ namespace Dolittle.Runtime.Events.Azure.Specs
         static readonly Guid _tenant = Guid.Parse("eb963893-0dfe-47be-9d1b-79b02e0f5d9d");
         public static ISerializer GetSerializer()
         {
-            var container_mock = new Mock<IContainer>();
             var converter_providers = new List<ICanProvideConverters>();
                                     
             var converter_provider_instances = new Mock<IInstancesOf<ICanProvideConverters>>();
             converter_provider_instances.Setup(c => c.GetEnumerator()).Returns(() => converter_providers.GetEnumerator());
-            return new Serializer(container_mock.Object, converter_provider_instances.Object);
+            return new Serializer(converter_provider_instances.Object);
         }
         
         public static IExecutionContextManager GetExecutionContext()
@@ -57,7 +57,9 @@ namespace Dolittle.Runtime.Events.Azure.Specs
                 DatabaseId = System.Environment.GetEnvironmentVariable(DATABASE),
                 AuthKey = System.Environment.GetEnvironmentVariable(AUTHKEY)
             };
-            return new EventStoreAzureDbConfiguration(config,GetLogger(), GetExecutionContext());
+            var configurationFor = new Mock<IConfigurationFor<EventStoreConfiguration>>();
+            configurationFor.SetupGet(_ => _.Instance).Returns(config);
+            return new EventStoreAzureDbConfiguration(configurationFor.Object,GetLogger(), GetExecutionContext());
         }
     }
 }
