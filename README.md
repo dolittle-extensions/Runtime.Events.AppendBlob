@@ -49,7 +49,7 @@ $ Build\build.sh
 
 | Project | AppVeyor | 
 | -------- | ------ |
-| Runtime.Events.Azure | [![Build status](https://ci.appveyor.com/api/projects/status/kjtjm9bol8xl9c62?svg=true)](https://ci.appveyor.com/project/Dolittle/runtime-events-azure) |
+| Runtime.Events.Azure | [![Build status](https://ci.appveyor.com/api/projects/status/9ti5wbo8mermf6iw?svg=true)](https://ci.appveyor.com/project/Dolittle/runtime-events-azure) |
 
 ## Visual Studio
 
