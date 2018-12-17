@@ -6,10 +6,10 @@
   </PropertyGroup>
   <Import Project="../Build/MSBuild/default.props" />
   <ItemGroup>
-    <PackageReference Include="Dolittle.Runtime.Events" Version="2.0.0-*" />
-    <PackageReference Include="Dolittle.Concepts" Version="2.0.0-*" />
-    <PackageReference Include="Dolittle.PropertyBags" Version="2.0.0-*" />
-    <PackageReference Include="Dolittle.Artifacts" Version="2.0.0-*" />
+    <PackageReference Include="Dolittle.Runtime.Events" Version="2.*" />
+    <PackageReference Include="Dolittle.Concepts" Version="2.*" />
+    <PackageReference Include="Dolittle.PropertyBags" Version="2.*" />
+    <PackageReference Include="Dolittle.Artifacts" Version="2.*" />
     <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.1.3" />
   </ItemGroup>
   <ItemGroup>
